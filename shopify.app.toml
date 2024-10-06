@@ -1,0 +1,34 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a0c518ef1c6ac6c1c144be3fdff61ca3"
+name = "b2b-order-manager"
+handle = "b2b-order-manager"
+application_url = "https://buck-spam-dictionary-phrase.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "nova-shopping-list.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_draft_orders,read_orders,write_customers,write_draft_orders,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://buck-spam-dictionary-phrase.trycloudflare.com/auth/callback",
+  "https://buck-spam-dictionary-phrase.trycloudflare.com/auth/shopify/callback",
+  "https://buck-spam-dictionary-phrase.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[app_proxy]
+url = "https://buck-spam-dictionary-phrase.trycloudflare.com"
+subpath = "b2b-order-manager"
+prefix = "apps"
+
+[pos]
+embedded = false
